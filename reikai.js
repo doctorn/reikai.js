@@ -140,3 +140,5 @@ function init() {
 }
 
 var reikai = {init : init, render : render};
+
+export {reikai};
