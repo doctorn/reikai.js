@@ -4,6 +4,7 @@
 var boxSize = 25;
 
 function render(board, data) {
+  board.innerHTML = "";
   board.style.width = "auto";
   board.style.height = "auto";
 
@@ -118,7 +119,6 @@ function render(board, data) {
 function init() {
   for (var board of document.querySelectorAll(".reikai_board")) {
     var boardJSON = board.getAttribute("data_board");
-    console.log(boardJSON);
     var boardData = {
       size : 19,
       start : {x : 0, y : 0},
@@ -128,10 +128,10 @@ function init() {
     if (boardJSON !== null) {
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
-        boardData = JSON.parse(xhttp.responseText);
+        boardData = JSON.parse(this.responseText);
         render(board, boardData);
       };
-      xhttp.open("POST", boardJSON, false);
+      xhttp.open("GET", boardJSON, false);
       xhttp.setRequestHeader("Content-type", "application/json");
       xhttp.send();
     } else
