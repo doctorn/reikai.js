@@ -89,7 +89,7 @@ function render(board, data) {
           2 * Math.PI);
   ctx.fill();
 
-  ctx.shadowBlur = 3;
+  ctx.shadowBlur = 1;
   ctx.shadowColor = "#000000";
   for (var stone of data.stones) {
     ctx.beginPath();
