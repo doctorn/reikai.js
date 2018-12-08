@@ -94,7 +94,7 @@ function render(board, data) {
   for (var stone of data.stones) {
     ctx.beginPath();
     ctx.arc((boxSize / 2) + boxSize * stone.x,
-            (boxSize / 2) + boxSize * stone.y, boxSize / 3, 0, 2 * Math.PI);
+            (boxSize / 2) + boxSize * stone.y, boxSize / 2 - 2, 0, 2 * Math.PI);
     if (stone.black)
       ctx.fillStyle = "#000000";
     else
