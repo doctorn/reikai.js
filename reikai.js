@@ -15,6 +15,7 @@ function render(board, data) {
 
   canvas.setAttribute("width", (gridWidth * boxSize) + "px");
   canvas.setAttribute("height", (gridHeight * boxSize) + "px");
+  canvas.style["box-shadow"] = "0px 2px 2px 0px rgba(0, 0, 0, 0.1)";
 
   board.style.width = (gridWidth * boxSize) + "px";
   board.style.height = (gridHeight * boxSize) + "px";
