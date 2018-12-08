@@ -5,8 +5,6 @@ var boxSize = 25;
 
 function render(board, data) {
   board.innerHTML = "";
-  board.style.width = "auto";
-  board.style.height = "auto";
 
   if (data.size != 9 && data.size != 13 && data.size != 19)
     throw "Only 9x9, 13x13 and 19x19 boards are permitted";
@@ -17,6 +15,9 @@ function render(board, data) {
 
   canvas.setAttribute("width", (gridWidth * boxSize) + "px");
   canvas.setAttribute("height", (gridHeight * boxSize) + "px");
+
+  board.style.width = (gridWidth * boxSize) + "px";
+  board.style.height = (gridHeight * boxSize) + "px";
   board.appendChild(canvas);
   var ctx = canvas.getContext("2d");
 
