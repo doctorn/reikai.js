@@ -1,10 +1,10 @@
-#reikai.js
+# reikai.js
 JavaScript library for creating and displaying example Go boards
 
-##About
+## About
 `reikai.js` was created as part of the [Cambridge University Go Society](http://cugosoc.soc.srcf.net/) website redesign. In legacy versions of the site, example boards had been stitched together out of small elements each the size of one grid square on a Go board. This resulted in hundreds of `img` tags to produce a single board. To solve this, `reikai.js` allows for boards to be described in a simple JSON format and then rendered to an HTML5 canvas. This means that a board can be embedded using a single `div` tag.
 
-##Usage
+## Usage
 A hosted version of `reikai.js` is available at [`http://cugosoc.soc.srcf.net/static/reikai.js`](http://cugosoc.soc.srcf.net/static/reikai.js) and can therefore be embedded as follows.
 
 ```html
@@ -62,5 +62,5 @@ Finally, on page load call `reikai.init()` to trigger the boards to be loaded. A
 </script>
 ```
 
-##Feedback
+## Feedback
 Issue reports and feedback are welcome.
